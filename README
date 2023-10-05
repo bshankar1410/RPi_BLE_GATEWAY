@@ -75,7 +75,7 @@ pip3 install beaconscanner uptime paho-mqtt psutil influxdb
 #
 cd ~/
 #clone repository
-git clone https://github.com/theBASTI0N/ble-gateway.git && cd ble-gateway
+git clone https://github.com/bshankar1410/RPi_BLE_GATEWAY.git && cd ble-gateway
 ```
 
 ## Configuration
