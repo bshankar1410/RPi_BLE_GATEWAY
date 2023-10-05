@@ -115,7 +115,7 @@ To enable the application as a service so it will run at boot. The following can
 
 ```bash
 #move to service director
-cd ~/ble-gateway/service
+cd ~/RPi_BLE_GATEWAY/ble-gateway/service
 #copy the service file to the correct location
 sudo cp blegateway.service /etc/systemd/system/
 #enable the service to start on boot
