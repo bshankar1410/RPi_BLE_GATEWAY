@@ -78,6 +78,7 @@ cd ~/
 git clone https://github.com/bshankar1410/RPi_BLE_GATEWAY.git && cd ble-gateway
 ```
 
+
 ## Configuration
 Edit the configuration file with your favourite editor.
 
