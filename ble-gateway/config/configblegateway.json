@@ -1,0 +1,68 @@
+{
+    "bleDevice": {
+        "bleDevice": 0
+    },
+    "filters": {
+        "eddystone": true,
+        "ibeacon": true,
+        "ruuvi": true,
+        "ruuviPlus": true,
+        "unknown": true,
+        "rssiThreshold": false,
+        "rssi": -60,
+        "macFilterEnabled": false,
+        "macFilter": [
+            "FFFF96C5A1EE",
+            "D8FFFFFFFD7A",
+            "FFFFFF284268"
+        ]
+    },
+    "names": {
+        "D8FFFFFFFD7A": "DREAMOFFICE"
+    },
+    "optime": {
+        "scantime": 1,
+        "pushtime": 5
+    },
+    "wificonf": {
+        "ssid": "FERVID",
+        "psk": "12345678"
+    },
+    "identifiers": {
+        "interface": "wlan0",
+        "location": "home",
+        "zone": "masterBedroom",
+        "gatewayType": "PiZero"
+    },
+    "endpoints": {
+        "mqttEnabled": true,
+        "httpEnabled": false,
+        "influxEnabled": false
+    },
+    "mqtt": {
+        "host": "45.79.117.227",
+        "port": 1883,
+        "user": "fervid",
+        "password": "pU8zBqQj",
+        "ssl": false,
+        "ca": null,
+        "cert": null,
+        "key": null
+    },
+    "http": {
+        "host": "127.0.0.1",
+        "port": 443,
+        "user": null,
+        "password": null,
+        "ca": null,
+        "cert": null,
+        "key": null
+    },
+    "influx": {
+        "host": "192.0.0.1",
+        "port": 8080,
+        "database": "ruuvi143",
+        "user": "fervid",
+        "password": "12345678"
+    }
+}

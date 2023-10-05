@@ -1,0 +1,66 @@
+{
+  "bleDevice" : {
+    "bleDevice" : 0,
+  },
+  "filters" : {
+    "eddystone" : true,
+    "ibeacon" : true,
+    "ruuvi" : true,
+    "ruuviPlus" : true,
+    "unknown" : true,
+    "rssiThreshold" : false,
+    "rssi" : -60,
+    "macFilterEnabled" : false,
+    "macFilter" : [
+      "FFFF96C5A1EE",
+      "D8FFFFFFFD7A",
+      "FFFFFF284268"
+    ]
+  },
+  "names" : {
+    "FD415223E45D" : "Outside Patio",
+    "FFFFFF284268" : "Master Bedroom",
+    "D8FFFFFFFD7A" : "Outside Garden"
+  },
+  "optime" : {
+    "scantime" : 1,
+    "pushtime" : 5
+  },
+  "identifiers" : {
+    "interface" : "wlan0",
+    "location" : "home",
+    "zone" : "masterBedroom",
+    "gatewayType" : "PiZero"
+  },
+  "endpoints" : {
+      "mqttEnabled" : true,
+      "httpEnabled" : false,
+      "influxEnabled" : false
+  },
+  "mqtt" : {
+    "host" : "45.79.117.227",
+    "port" : 1883,
+    "user" : "fervid",
+    "password" : "pU8zBqQj",
+    "ssl" : false,
+    "ca" : null,
+    "cert" : null,
+    "key" : null
+  },
+  "http" : {
+    "host" : "127.0.0.1",
+    "port" : 443,
+    "user" : null,
+    "password" : null,
+    "ca" : null,
+    "cert" : null,
+    "key" : null
+  },
+  "influx" : {
+    "host" : "127.0.0.1",
+    "port" : 8086,
+    "database" : "ruuvi",
+    "user" : null,
+    "password" : null
+  }
+}
