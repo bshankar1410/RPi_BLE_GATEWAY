@@ -34,8 +34,7 @@
   },
   "endpoints" : {
       "mqttEnabled" : true,
-      "httpEnabled" : false,
-      "influxEnabled" : false
+      "httpEnabled" : false
   },
   "mqtt" : {
     "host" : "45.79.117.227",
@@ -56,11 +55,7 @@
     "cert" : null,
     "key" : null
   },
-  "influx" : {
-    "host" : "127.0.0.1",
-    "port" : 8086,
-    "database" : "ruuvi",
-    "user" : null,
-    "password" : null
+  "ota_update" : {
+    "ota_status" : false
   }
 }

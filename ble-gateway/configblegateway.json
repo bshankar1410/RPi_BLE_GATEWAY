@@ -6,38 +6,40 @@
         "eddystone": true,
         "ibeacon": true,
         "ruuvi": true,
-        "ruuviPlus": true,
-        "unknown": true,
+        "ruuviPlus": false,
+        "unknown": false,
         "rssiThreshold": false,
         "rssi": -60,
         "macFilterEnabled": false,
         "macFilter": [
-            "FFFF96C5A1EE",
-            "D8FFFFFFFD7A",
-            "FFFFFF284268"
+            "fd415223e45d",
+            "dc3fd0bbcec2",
+            "c467f2f9cf5a",
+            "f7ac6ea886b1"
         ]
     },
     "names": {
-        "D8FFFFFFFD7A": "DREAMOFFICE"
+        "FD415223E45D": "Fervid06",
+        "FFFFFF284268": "Master Bedroom",
+        "D8FFFFFFFD7A": "Outside Garden"
     },
     "optime": {
         "scantime": 1,
         "pushtime": 5
     },
     "wificonf": {
-        "ssid": "FERVID",
-        "psk": "12345678"
+        "ssid": "bhavani",
+        "psk": "87654321"
     },
     "identifiers": {
         "interface": "wlan0",
-        "location": "home",
-        "zone": "masterBedroom",
-        "gatewayType": "PiZero"
+        "location": "FervidOffice",
+        "zone": "JubileeHills",
+        "gatewayType": "RPi"
     },
     "endpoints": {
         "mqttEnabled": true,
-        "httpEnabled": false,
-        "influxEnabled": false
+        "httpEnabled": false
     },
     "mqtt": {
         "host": "45.79.117.227",
@@ -49,20 +51,7 @@
         "cert": null,
         "key": null
     },
-    "http": {
-        "host": "127.0.0.1",
-        "port": 443,
-        "user": null,
-        "password": null,
-        "ca": null,
-        "cert": null,
-        "key": null
-    },
-    "influx": {
-        "host": "192.0.0.1",
-        "port": 8080,
-        "database": "ruuvi143",
-        "user": "fervid",
-        "password": "12345678"
+    "ota_update" : {
+        "ota_status" : false
     }
 }

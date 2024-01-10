@@ -33,6 +33,7 @@ def read_last_character_in_bledata_file(bledata_file_path):
         with open(bledata_file_path, "rb") as json_file:
             json_file.seek(-1, 2)  # Go to the end of the file
             last_character = json_file.read(1).decode('utf-8')
+#            print(last_character)
             return last_character
     except FileNotFoundError:
         return None

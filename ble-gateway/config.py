@@ -2,9 +2,9 @@ import json
 
 try:
   # Allows for test config file to be used during development
-  config = json.load(open('config/testblegateway.json',))
+  config = json.load(open('configblegateway.json',))
 except:
-  config = json.load(open('config/blegateway.json',))
+  config = json.load(open('blegateway.json',))
 
 def get_config(section):
   if section == 'bleDevice' or section == 'filters' or \
@@ -12,7 +12,7 @@ def get_config(section):
       section == 'optime' or section == 'names':
       return config[section]
   elif section == 'mqtt' or section == 'http' or \
-    section == 'influx':
+    section == 'otaupdate':
     if section in config:
       return config[section]
   else:
