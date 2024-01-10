@@ -43,6 +43,7 @@ generate_shafiles.create_sha_file(blegateway_path,blegateway_sha_path)
 generate_shafiles.create_sha_file(config_path,config_sha_path)
 generate_shafiles.create_sha_file(ble2json_path,ble2json_sha_path)
 
+anusha="Hi anusha"
 
 character_to_check = '['
 
