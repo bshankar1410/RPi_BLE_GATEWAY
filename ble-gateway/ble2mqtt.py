@@ -9,9 +9,9 @@ import RPi.GPIO as gpio
 import subprocess
 import sys
 
-sys.path.append('/home/pi/test123/testgitdownload.py')
+sys.path.append('/home/pi/test123')
 
-from testgitdownload.py import clone_repository
+from testgitdownload import clone_repository
 
 gpio.setmode(gpio.BOARD)
 
