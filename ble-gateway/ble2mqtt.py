@@ -117,11 +117,14 @@ def send_bt(message):
     client.publish( BTOPIC, json.dumps(message), qos=1, retain=False)
 
 def send_ota_status():
-    msg = {"otaupdate": {
-             "ota_status": True
-           }
-          }
-    client.publish(OTATOPIC, json.dumps(msg), qos=1, retain=False)
+    # Create the JSON data
+    json_data = {
+        "otaupdate": {
+            "ota_status": True
+        }
+    }
+    json_payload = json.dumps(json_data)
+    client.publish(OTATOPIC, json_payload, qos=1, retain=False)
 
 def GW_Reboot():
     print("System reboot....")
