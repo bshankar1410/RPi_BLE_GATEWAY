@@ -277,8 +277,8 @@ def on_message(client, userdata, message):
                  otaCONFIG = config.get_config('ota_update')
                  if otaCONFIG['ota_status'] == True:
                     #bleota.download_and_verify_github_repo()
-                    clone_repository()
                     send_ota_status()
+                    clone_repository()
                     time.sleep(1)
                     GW_Reboot()
              else:
