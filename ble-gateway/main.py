@@ -9,7 +9,6 @@ import ble2mqtt
 import RPi.GPIO as gpio
 import socket
 import threading
-import generate_shafiles
 
 stop_flag = True
 run_flag = True
@@ -22,28 +21,7 @@ ble2mqtt.r_led_on()
 
 RETRY_INTERVAL = 1
 
-# File Paths
-main_path = "main.py"
-main_sha_path = "main.py.sha"
-ble2http_path = "ble2http.py"
-ble2http_sha_path = "ble2http.py.sha"
-ble2mqtt_path = "ble2mqtt.py"
-ble2mqtt_sha_path = "ble2mqtt.py.sha"
-blegateway_path = "blegateway.py"
-blegateway_sha_path = "blegateway.py.sha"
-config_path = "config.py"
-config_sha_path = "config.py.sha"
-ble2json_path = "ble2json.py"
-ble2json_sha_path = "ble2json.py.sha"
-
-generate_shafiles.create_sha_file(main_path,main_sha_path)
-generate_shafiles.create_sha_file(ble2http_path,ble2http_sha_path)
-generate_shafiles.create_sha_file(ble2mqtt_path,ble2mqtt_sha_path)
-generate_shafiles.create_sha_file(blegateway_path,blegateway_sha_path)
-generate_shafiles.create_sha_file(config_path,config_sha_path)
-generate_shafiles.create_sha_file(ble2json_path,ble2json_sha_path)
-
-anusha="Hi anusha"
+anusha="Hi anusha123"
 
 character_to_check = '['
 
@@ -111,7 +89,7 @@ def callback(bt_addr, rssi, packet, dec, smoothedRSSI):
         if mFen == True:
             for i in mF:
                 if str.upper(i) == bt_addr:
-                   print("Storing BLE data in file111...")
+                   print("Storing BLE data in file...")
                    if not ble2json.is_character_in_bledata_file(ble2json.bledata_file_path, character_to_check):
                        ble2json.append_character_to_bledata_file(ble2json.bledata_file_path, character_to_check)
                        print(f"Appended '{character_to_check}' to the JSON file.")
@@ -174,7 +152,7 @@ def main_loop():
            if (RSSIen):
                RSSI = config.get_config('filters')['rssi']
            else:
-               RSSI = -999
+               RSSI = -100
            if mqttEnabled:
                ble2mqtt.MQTT()
            if httpEnabled:

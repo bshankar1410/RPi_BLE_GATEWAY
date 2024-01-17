@@ -51,7 +51,7 @@
         "cert": null,
         "key": null
     },
-    "ota_update" : {
-        "ota_status" : false
+    "ota_update": {
+        "ota_status": false
     }
 }

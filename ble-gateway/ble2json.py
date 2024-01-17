@@ -2,7 +2,7 @@ import time
 import json
 
 bledata_file_path = "/home/pi/RPi_BLE_GATEWAY/ble-gateway/ble_data_file.json"
-config_file_path = "/home/pi/RPi_BLE_GATEWAY/ble-gateway/config/configblegateway.json"
+config_file_path = "/home/pi/RPi_BLE_GATEWAY/ble-gateway/configblegateway.json"
 replacement_character = ']'
 
 def remove_contents_from_bledata_file(bledata_file_path):

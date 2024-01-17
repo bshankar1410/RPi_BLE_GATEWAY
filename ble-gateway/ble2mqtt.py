@@ -7,7 +7,11 @@ import blegateway
 import ble2json
 import RPi.GPIO as gpio
 import subprocess
-import bleota
+import sys
+
+sys.path.append('/home/pi/test123/testgitdownload.py')
+
+from testgitdownload.py import clone_repository
 
 gpio.setmode(gpio.BOARD)
 
@@ -22,13 +26,13 @@ gpio.setup(b_led,gpio.OUT)
 gpio.output(b_led,0)
 
 mqttCONFIG = config.get_config('mqtt')
+
 ids = config.get_config('identifiers')
 
 BTOPIC = ids['location'] + "/" + ids['zone']
 print("Main Topic: " + BTOPIC)
 GWTOPIC = 'Gateway/' + ids['location'] + "/" + ids['zone']
 print("Gateway Topic: " + GWTOPIC)
-#RCTOPIC = 'Config/blegateway'
 RCTOPIC = "RPiGW"
 print("Config Topic: " + RCTOPIC)
 OTATOPIC = "OTARPiGW"
@@ -117,7 +121,7 @@ def send_ota_status():
              "ota_status": True
            }
           }
-    client.publish(OTATOPIC, json.dumps(msg), qos=1, retain=False)\
+    client.publish(OTATOPIC, json.dumps(msg), qos=1, retain=False)
 
 def GW_Reboot():
     print("System reboot....")
@@ -272,21 +276,10 @@ def on_message(client, userdata, message):
                  ble2json.save_config_to_configblegateway_file(ble2json.config_file_path,updated_data)
                  otaCONFIG = config.get_config('ota_update')
                  if otaCONFIG['ota_status'] == True:
-                    bleota.download_and_verify_github_repo()
-#                    ble2http.download_ota_file()
-#                    ble2http.create_sha_file()
-#                    ble2http.download_git_sha_file()
-#                    ble2http.compare_sha_files()
+                    #bleota.download_and_verify_github_repo()
+                    clone_repository()
                     send_ota_status()
-                    with open("config/configblegateway.json", 'r') as json_file:
-                         data = json.load(json_file)
-                    # Update the value of "ota_status" to False
-                    data["ota_update"]["ota_status"] = False
-                    # Write the updated data back to the file
-                    with open("config/configblegateway.json", 'w') as json_file:
-                         json.dump(data, json_file, indent=2)
-                    print("ota_status in configblegateway.json updated to False.")
-                    time.sleep(5)
+                    time.sleep(1)
                     GW_Reboot()
              else:
                  print("No Update Needed...")

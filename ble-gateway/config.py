@@ -12,7 +12,7 @@ def get_config(section):
       section == 'optime' or section == 'names':
       return config[section]
   elif section == 'mqtt' or section == 'http' or \
-    section == 'otaupdate':
+    section == 'ota_update':
     if section in config:
       return config[section]
   else:

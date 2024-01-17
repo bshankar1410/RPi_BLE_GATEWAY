@@ -14,10 +14,9 @@ def getMAC(interface="eth0"):
     str = "00:00:00:00:00:00"
   return str[0:17]
 
-DEVmac = str.upper(getMAC(config.get_config('identifiers')['interface']).translate({ord(':'): None}))
-
 def gateway_mac():
-   # print("Device MAC:",DEVmac)
+    #print("Device MAC:",DEVmac)
+    DEVmac = str.upper(getMAC(config.get_config('identifiers')['interface']).translate({ord(':'): None}))
     return DEVmac
 
 def timestamp():
