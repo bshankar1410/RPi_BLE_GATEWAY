@@ -21,7 +21,7 @@ ble2mqtt.r_led_on()
 
 RETRY_INTERVAL = 1
 
-anusha="Hi anusha17_01_2023_5:59"
+anusha="Hi anusha25-03-2025"
 
 character_to_check = '['
 
