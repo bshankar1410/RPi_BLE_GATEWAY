@@ -119,8 +119,8 @@ def send_bt(message):
 def send_ota_status():
     # Create the JSON data
     json_data = {
-        "otaupdate": {
-            "ota_status": True
+        "ota_update": {
+            "ota_status": true
         }
     }
     json_payload = json.dumps(json_data)
